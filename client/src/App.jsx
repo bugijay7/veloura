@@ -1,7 +1,7 @@
 import React from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
-
+import ScrollToTop from "./component/ScrollToTop"
 import Navbar from "./component/Navbar"
 import Footer from "./component/Footer"
 
@@ -17,6 +17,7 @@ import ServicesPage from "./pages/ServicePage"
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         {/* Define your routes here */}
