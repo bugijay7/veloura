@@ -6,6 +6,29 @@ import aromatherapy from "../assets/aromatherapy.png";
 import relaxationLounge from "../assets/relaxation-lounge.png";
 
 function AboutPage() {
+
+  const testimonials = [
+  {
+    name: "Sarah Wanjiku",
+    comment:
+      "An incredible experience. The atmosphere alone melts away stress, and the therapists are truly skilled."
+  },
+  {
+    name: "Daniel Mwangi",
+    comment:
+      "Veloura Spa feels like stepping into another world. Calm, professional, and deeply relaxing."
+  },
+  {
+    name: "Grace Achieng",
+    comment:
+      "The aromatherapy massage was exceptional. Every detail from lighting to scent was perfect."
+  },
+  {
+    name: "James Otieno",
+    comment:
+      "A refined and peaceful space. I left feeling completely renewed and balanced."
+  }
+];
   return (
     <div className="bg-[#FAF9F6] text-[#2D2D2D] font-sans pt-32 pb-24">
       
@@ -80,6 +103,36 @@ function AboutPage() {
           <img src={relaxationLounge} alt="Veloura relaxation lounge" className="w-full h-[500px] object-cover" />
         </div>
       </section>
+
+      {/* 6. CLIENT TESTIMONIALS */}
+<section className="py-24 px-6 md:px-24 border-t border-[#E5E5E5]">
+  <h2 className="text-sm uppercase tracking-[0.3em] mb-16 text-center text-[#A0A0A0]">
+    Client Reflections
+  </h2>
+
+  <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+    {testimonials.map((t, index) => (
+      <div key={index} className="space-y-6">
+        
+        {/* Stars */}
+        <div className="text-[#D4AF37] text-lg tracking-wide">
+          ★★★★★
+        </div>
+
+        {/* Comment */}
+        <p className="text-lg font-light leading-relaxed text-[#555] italic">
+          "{t.comment}"
+        </p>
+
+        {/* Name */}
+        <p className="text-sm uppercase tracking-[0.25em] text-[#2D2D2D]">
+          {t.name}
+        </p>
+
+      </div>
+    ))}
+  </div>
+</section>
 
     </div>
   );

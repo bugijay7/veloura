@@ -31,13 +31,13 @@ function Navbar() {
       </Link>
 
       {/* MOBILE TOGGLE */}
-      <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+      <button className="md:hidden text-black font-serif uppercase" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? "Close" : "Menu"}
       </button>
 
       {/* MOBILE MENU */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#FAF9F6] border-b border-[#E5E5E5] flex flex-col items-center py-10 space-y-6 md:hidden">
+        <div className="absolute top-full left-0 w-full bg-[#FAF9F6] border-b border-[#E5E5E5]  uppercase flex flex-col items-center font-serif text-black  py-10 space-y-6 md:hidden">
           {["Home", "About", "Services",  "Contact", "Booking"].map((item) => (
             <Link key={item} to={item === "Home" ? "/" : `/${item.toLowerCase()}`} onClick={() => setIsOpen(false)}>
               {item}
