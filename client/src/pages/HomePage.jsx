@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import heroImage from "../assets/hero.jpg";
 import spaInterior from "../assets/spa-interior.jpg";
@@ -22,9 +23,11 @@ function Home() {
           <p className="text-xl md:text-2xl font-light tracking-wide mb-10 text-[#555]">
              Experience tranquility, renewal, and timeless relaxation.
           </p>
-          <button className="border border-[#2D2D2D] px-10 py-4 hover:bg-[#2D2D2D] hover:text-white transition-all duration-500 uppercase tracking-widest text-sm">
-            Book Appointment
-          </button>
+          <Link to="/bookings">
+  <button className="border border-[#2D2D2D] px-10 py-4 hover:bg-[#2D2D2D] hover:text-white transition-all duration-500 uppercase tracking-widest text-sm">
+    Book Appointment
+  </button>
+</Link>
         </div>
       </section>
 
