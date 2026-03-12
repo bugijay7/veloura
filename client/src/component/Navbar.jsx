@@ -38,7 +38,7 @@ function Navbar() {
       {/* MOBILE MENU */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-[#FAF9F6] border-b border-[#E5E5E5]  uppercase flex flex-col items-center font-serif text-black  py-10 space-y-6 md:hidden">
-          {["Home", "About", "Services",  "Contact", "Booking"].map((item) => (
+          {["Home", "About", "Services",  "Contact", "Bookings"].map((item) => (
             <Link key={item} to={item === "Home" ? "/" : `/${item.toLowerCase()}`} onClick={() => setIsOpen(false)}>
               {item}
             </Link>
